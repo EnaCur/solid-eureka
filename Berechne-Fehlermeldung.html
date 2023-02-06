@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Enter first number: <input type="text" id="num1"></p>
+<p>Enter second number: <input type="text" id="num2"></p>
+<button onclick="calculate()">Berechne</button>
+<p id="result"></p>
+
+<script>
+function calculate() { 
+    var num1 = document.getElementById("num1").value;
+    var num2 = document.getElementById("num2").value;
+    var result = parseFloat(num1) + parseFloat(num2);
+    document.getElementById("result").innerHTML = result;
+
+function checkNumberInput(input) {
+  if (isNaN(input)) {
+    throw new Error("Bitte geben Sie eine Zahl ein.");
+  }
+}
+
+try {
+  checkNumberInput(document.getElementById("numberInput").value);
+} catch (error) {
+  alert(error);
+}
+}
+</script>
+
+<body>
+</html>
+
+
+
+
